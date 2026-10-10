@@ -22,7 +22,6 @@ public class LogsFilter implements Filter {
 
         System.out.println(httpServletRequest.getMethod() +
                 httpServletRequest.getRequestURI());
-        System.out.println(httpServletRequest.getHeader("token"));
         filterChain.doFilter(httpServletRequest,httpServletResponse);
         httpServletResponse.setHeader("sheema","sa");
         httpServletResponse.setHeader("user-name","sheema");
