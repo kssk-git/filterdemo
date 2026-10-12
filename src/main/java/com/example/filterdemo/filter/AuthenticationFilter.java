@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 @Component
-@Order(1)
+@Order(2)
 public class AuthenticationFilter implements Filter {
 
 
@@ -19,6 +19,7 @@ public class AuthenticationFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
         String authenticate = request.getHeader("token");
+        System.out.println(authenticate);
 
         if(authenticate==null || !authenticate.equals("1234")){
            response.setStatus(401);
